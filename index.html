@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>gexif</title>
+	    <link rel="stylesheet" href="assets/css/style.css">
+		<link href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+	    <script src="assets/js/main.js"></script>
+
+    </head>
+    <body>
+
+        <center>
+			<h5> </h5>
+			<h1>gexif <span class="Label mr-1 Label--attention">beta</span></h1> 
+			<h5> </h5>
+			<input type="file" id="file" accept="image/*" />
+			<button id="btn" class="btn btn-primary" onclick="getExif()">Get EXIF</button>
+			<div id="output"></div>
+			<div id="extradata"></div>
+			<p>Need to upload more images? <a href="multi-image.html">Try mutli-image mode.</a></p>
+			</center>
+
+	</body>
+
+</html>

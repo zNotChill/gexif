@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>gexif</title>
+	    <link rel="stylesheet" href="assets/css/style.css">
+		<link href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+	    <script src="assets/js/multi-image.js"></script>
+
+    </head>
+    <body>
+		<div class="p-1">
+			<div class="Toast Toast--warning">
+			  <span class="Toast-icon">
+				<!-- <%= octicon "alert" %> -->
+				<svg width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-alert" aria-hidden="true">
+				  <path
+					fill-rule="evenodd"
+					d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"
+				  />
+				</svg>
+			  </span>
+			  <span class="Toast-content">Multi-image mode is unstable. Use at your own risk.</span>
+			</div>
+		  </div>
+        <center>
+			<h5> </h5>
+			<h1>gexif - multi image mode <span class="Label mr-1 Label--severe">unstable</span></h1>
+			<h5> </h5>
+			<a href="index.html">Back ></a>
+		</center>
+		<center>
+			<input type="file" id="file1" accept="image/*" />
+			<input type="file" id="file2" accept="image/*" />
+			<input type="file" id="file3" accept="image/*" />
+			<input type="file" id="file4" accept="image/*" />
+			<input type="file" id="file5" accept="image/*" />
+			<button id="btn" class="btn btn-primary" onclick="getExif()">Get EXIF</button>
+			</center>
+			<div id="downloadbutton"></div>
+			<div id="output"></div>
+			<div id="output2"></div>
+			<div id="output3"></div>
+			<div id="output4"></div>
+			<div id="output5"></div>
+			<div id="extradata"></div>
+			
+			
+
+	</body>
+
+</html>
