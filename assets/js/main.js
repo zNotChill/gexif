@@ -8,14 +8,18 @@
 // Function to throw away the image after we're done with it. We don't want to store other's images.
 function throwAway() {
 	// Get the image from the input box
-	var file = document.getElementById('file').files[0];
+	var file = document.querySelector('#file').files[0];
 	// Delete the image
-	file.delete();
+	try {
+		file.delete();
+	} catch (error) {
+		return
+	}
 }
 
 // Get the image from the input box when button is clicked and get EXIF data
 function getExif() {
-	var file = document.getElementById('file').files[0];
+	var file = document.querySelector('#file').files[0];
 	var reader = new FileReader();
 	reader.onload = function(e) {
 		// Create a new image and set that image to the image from the inputbox
@@ -25,7 +29,7 @@ function getExif() {
 		img.onload = function() {
 			EXIF.getData(img, function() {
 				// Our output div is id'd output
-				var output = document.getElementById('output');
+				var output = document.querySelector('#output');
 				// set our exif data
 				output.innerHTML = '<h3>EXIF Data</h3>';
 				output.innerHTML += '<p>Make: ' + EXIF.getTag(this, 'Make') + '</p>';
@@ -57,7 +61,7 @@ function getExif() {
 // Get extra information that one might not want
 function extraExifData() {
 	// This function is *exactly* the same as the one above. It just displays other information.
-	var file = document.getElementById('file').files[0];
+	var file = document.querySelector('#file').files[0];
 	var reader = new FileReader();
 	reader.onload = function(e) {
 		var img = new Image();
@@ -65,7 +69,7 @@ function extraExifData() {
 		img.onload = function() {
 			EXIF.getData(img, function() {
 				// get our extra exif data
-				var output = document.getElementById('extradata');
+				var output = document.querySelector('#extradata');
 				output.innerHTML = '<h3>Extra EXIF Data</h3>';
 				output.innerHTML += '<p>Focal Length: ' + EXIF.getTag(this, 'FocalLength') + '</p>';
 				output.innerHTML += '<p>Flash: ' + EXIF.getTag(this, 'Flash') + '</p>';
