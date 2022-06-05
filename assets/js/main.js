@@ -26,8 +26,12 @@ function getExif() {
     // Function to get our image data
     img.onload = function () {
       EXIF.getData(img, function () {
-        // Our output div is id'd output
         var output = document.getElementById("output");
+        if(EXIF.getTag(this, "Make") == undefined && EXIF.getTag(this, "Model") == undefined && EXIF.getTag(this, "DateTime") == undefined && EXIF.getTag(this, "FNumber") == undefined && EXIF.getTag(this, "ISOSpeedRatings") == undefined && EXIF.getTag(this, "ExposureTime") == undefined) {
+          output.innerHTML += "<h3>No data found for this image.</h3>"
+          return
+        }
+        // Our output div is id'd output
         // set our exif data
         output.innerHTML = "<h3>EXIF Data</h3>";
         output.innerHTML += "<p>Make: " + EXIF.getTag(this, "Make") + "</p>";
