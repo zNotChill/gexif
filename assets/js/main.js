@@ -28,7 +28,7 @@ function getExif() {
       EXIF.getData(img, function () {
         var output = document.getElementById("output");
         if(EXIF.getTag(this, "Make") == undefined && EXIF.getTag(this, "Model") == undefined && EXIF.getTag(this, "DateTime") == undefined && EXIF.getTag(this, "FNumber") == undefined && EXIF.getTag(this, "ISOSpeedRatings") == undefined && EXIF.getTag(this, "ExposureTime") == undefined) {
-          output.innerHTML += "<h3>No data found for this image.</h3>"
+          output.innerHTML = "<h3>No data found for this image.</h3>"
           return
         }
         // Our output div is id'd output
