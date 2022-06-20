@@ -2,3 +2,18 @@
 h5 {
 	padding-top: 50px;
 }
+.homepage__anchor {
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 14px;
+	display: flex;
+	position: absolute;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	padding-left: 20px;
+	padding-right: 3px;
+	border-bottom: #777 2px solid;
+}
+footer {
+	padding: 10px;
+}
