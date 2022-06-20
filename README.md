@@ -8,4 +8,5 @@ gexif is currently in beta. Please report any issues or bugs.
 Currently, gexif is only a proof-of-concept. gexif soon will be a proper program that runns on-device. However, the gexif webapp will still be activly developed.
 
 <h3 align="center">License</h3>
-See `LICENSE` for the license.
+
+See [LICENSE](https://github.com/BlockArchitech/gexif/blob/master/LICENSE.md) for the license.
