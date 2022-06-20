@@ -9,4 +9,4 @@ Currently, gexif is only a proof-of-concept. gexif soon will be a proper program
 
 <h3 align="center">License</h3>
 
-See ![LICENSE](https://github.com/BlockArchitech/gexif/blob/master/LICENSE.md) for the license.
+See [LICENSE](https://github.com/BlockArchitech/gexif/blob/master/LICENSE.md) for the license.
